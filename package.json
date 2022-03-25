@@ -13,10 +13,10 @@
     "url": "git+https://github.com/Fefaodessa/goit-js-hw-08"
   },
   "keywords": [],
-  "author": "Alexander Repeta <alexander.repeta@gmail.com>",
+  "author": "Arbakov Max <fefaodessa@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Fefaodessa/goit-js-hw-08"
+    "url": "https://github.com/Fefaodessa"
   },
   "devDependencies": {
     "parcel-bundler": "^1.12.5",
