@@ -16,15 +16,15 @@ savedTextareaMassage()
 function savedInputEmail(){
     const savedEmailString = localStorage.getItem(STORAGE_KEY);
     const savedEmail = JSON.parse(savedEmailString)
-        if(savedEmail.email){
-            refs.input.value = savedEmail.email;
-        }
+        if(savedEmail?.email){
+            refs.input.value = savedEmail.email;}
+        
 }
 
 function savedTextareaMassage(){
     const savedMassageString = localStorage.getItem(STORAGE_KEY);
     const savedMassage = JSON.parse(savedMassageString)
-        if(savedMassage.massage){
+        if(savedMassage?.massage){
             refs.textarea.value = savedMassage.massage;
     }
 }
