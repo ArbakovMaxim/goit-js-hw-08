@@ -10,8 +10,8 @@
     };
     player.on('timeupdate', throttle(onPlay, 1000));
 
-    const timeStopPleyr = localStorage.getItem("videoplayer-current-time");
-    const timeStop =JSON.parse(timeStopPleyr)
+    const timeStopPlayer = localStorage.getItem("videoplayer-current-time");
+    const timeStop =JSON.parse(timeStopPlayer)
 
     player.setCurrentTime(timeStop)
     
