@@ -29,26 +29,20 @@ function savedTextareaMassage(){
     }
 }
 
-const localStorageEl ={
-    massage : '',
-    email : "",
+let localStorageEl = {}
+
+refs.form.addEventListener("input", throttle(allData, 500))
+
+function allData(event){
+    if(event.target === refs.input){
+        localStorageEl.email = event.target.value;
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(localStorageEl))
+    }
+    else{
+        localStorageEl.massage = event.target.value;
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(localStorageEl));
+    }
 }
-
-
-refs.input.addEventListener('input', throttle(oninput, 500));
-
-refs.textarea.addEventListener('keydown', throttle(onTextarea, 500));
-
-function onTextarea(event){
-    localStorageEl.massage = event.target.value;
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(localStorageEl));
-}
-
-function oninput(event){
-    localStorageEl.email = event.target.value;
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(localStorageEl));
-}
-
 
 refs.form.addEventListener("submit", onForm)
 
@@ -56,10 +50,8 @@ function onForm(event) {
     event.preventDefault();
     const savedDataline = localStorage.getItem(STORAGE_KEY);
     const savedData = JSON.parse(savedDataline)
-    console.log('email :', savedData.email);
-    console.log('massage :', savedData.massage);
+    console.log(savedData);
     event.target.reset()
-    localStorageEl.email = '';
-    localStorageEl.massage = '';
+    localStorageEl = {};
     localStorage.removeItem(STORAGE_KEY)
   };
