@@ -13,5 +13,5 @@
     const timeStopPlayer = localStorage.getItem("videoplayer-current-time");
     const timeStop =JSON.parse(timeStopPlayer)
 
-    player.setCurrentTime(timeStop)
+    player.setCurrentTime(Number.timeStop = 0)
     
