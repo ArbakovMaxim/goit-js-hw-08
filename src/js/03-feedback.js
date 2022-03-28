@@ -9,6 +9,14 @@ const refs = {
 }
 
 const STORAGE_KEY = "feedback-form-state"
+const memoryValueString = localStorage.getItem(STORAGE_KEY);
+const memoryValue = JSON.parse(memoryValueString)
+
+let localStorageEl = {
+    email : "",
+    massage : "",
+    ...memoryValue
+};
 
 savedInputEmail()
 savedTextareaMassage()
@@ -29,7 +37,6 @@ function savedTextareaMassage(){
     }
 }
 
-let localStorageEl = {}
 
 refs.form.addEventListener("input", throttle(allData, 500))
 
