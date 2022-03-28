@@ -1,6 +1,5 @@
     import throttle from 'lodash.throttle';
-    //Видео
-
+    
     const iframe = document.querySelector('iframe');
     const player = new Vimeo.Player(iframe);
     
