@@ -15,7 +15,8 @@
 
     player.setCurrentTime(Number.timeStop = 0).then(function(seconds) {
     }).catch(function(error) {
-        switch (error.name) {
+        console.log(error)
+        switch (error.name) {  
             case 'RangeError':
                 break;
     
