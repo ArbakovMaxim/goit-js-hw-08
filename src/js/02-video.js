@@ -14,7 +14,6 @@
     const timeStop =JSON.parse(timeStopPlayer)
 
     player.setCurrentTime(Number.timeStop = 0).then(function(seconds) {
-        
     }).catch(function(error) {
         switch (error.name) {
             case 'RangeError':
