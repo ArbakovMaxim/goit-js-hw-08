@@ -18,7 +18,7 @@
         switch (error.name) {  
             case 'RangeError':
                 break;
-                
+                //или
             default:
                 break;
         }
